@@ -1,15 +1,15 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Detail from "routes/Detail";
 import Home from "routes/Home";
 
 function App() {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path={`${process.env.PUBLIC_URL}/`}  element={<Home />}></Route>
         <Route path={`${process.env.PUBLIC_URL}/movie/:id`} element={<Detail />}></Route>
       </Routes>
-    </HashRouter>
+    </Router>
   );
 }
 export default App;
